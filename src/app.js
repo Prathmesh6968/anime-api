@@ -15,6 +15,7 @@ app.get("/",(req,res)=>{
         }   
     }
 })
+
 app.use("/api",home)
 app.use("/api/fresh-drop",fresh)
 app.use("/api/latest-movies",latest)
