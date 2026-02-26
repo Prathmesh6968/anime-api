@@ -9,7 +9,7 @@ app.get("/",(req,res)=>{
             Documentation: "For Documentation prefer to this repository https://github.com/Prathmesh6968/anime-api.git",
             contacts: [
                 {telegram: "@Neonsenpaigalaxy"},
-                {instagram: "Use Nahi Karta"}
+                {instagram: "Use Nahi Karta"},
                 {x: "@PrathmeshAnbule"}
             ]
         }   
