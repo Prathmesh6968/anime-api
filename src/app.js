@@ -14,6 +14,7 @@ app.get("/",(req,res)=>{
             ]
         }   
     }
+    res.send(data)
 })
 
 app.use("/api",home)
