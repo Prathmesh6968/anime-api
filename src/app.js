@@ -17,11 +17,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api",home)
-app.use("/api/fresh-drop",fresh)
-app.use("/api/latest-movies",latest)
-app.use("/api/most-watched-films",most_WatchedFilms)
-app.use("/api/most-watched-series",most_WatchedSeries)
-app.use("/api/on-air-series",on_air)
+
 
 
 module.exports = app
