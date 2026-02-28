@@ -1,5 +1,6 @@
 const home = require("./routes/home.routes.js")
 const stream = require("./routes/stream.routes.js")
+const series = require("./routes/series.routes.js")
 const express = require("express")
 const app = express()
 
@@ -20,6 +21,7 @@ app.get("/",(req,res)=>{
 
 app.use("/api",home)
 app.use("/api/stream",stream)
+app.use("/api/series",series)
 
 
 
