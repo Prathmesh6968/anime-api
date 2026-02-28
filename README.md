@@ -126,7 +126,7 @@ GET /api/series
 
 ```javascript
 import axios from "axios";
-const resp = await axios.get("/api/search?page=13");
+const resp = await axios.get("/api/series?page=13");
 console.log(resp.data);
 ```
 
