@@ -24,9 +24,12 @@ const newAddedScraper = async () => {
             const title = fullTitle.replace(/\s\d+x\d+$/, "");
 
             const href = $(el).find("a.lnk-blk").attr("href");
-            const anime_id = href
+
+            let anime_id = href
                 ?.replace(`${url}/episode/`, "")
                 ?.replace("/", "");
+                
+            anime_id = anime_id.replace(/[-]?\d+x\d+$/, "");
 
             const posterSrc = $(el).find("img").attr("src");
             const poster = posterSrc?.startsWith("//")
