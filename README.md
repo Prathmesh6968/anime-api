@@ -45,7 +45,7 @@ The repository owner is not responsible for any misuse or illegal activities per
 
 ## Local installation
 
-1. Make sure to that you installed `node` on your local machine.
+1. Make sure you have Node.js installed on your local machine.
 
 ```bash
 #For termux
@@ -120,7 +120,7 @@ GET /api/stream
 | Parameter | Parameter-Type | Data-Type | Description | Mandatory ? | Default |
 | :-------: | :------------: | :-------: | :---------: | :---------: | :-----: |
 |   `s`     |    `query`     |  string   |   Search    |    yes ✔️   |    --   |
-| `Number`  |    `query`     |  Number   |   page no.  |     No ✖️   |    1    |
+|  `page`   |    `query`     |  Number   |   page no.  |     No ✖️   |    1    |
 
 #### Example of request
 
