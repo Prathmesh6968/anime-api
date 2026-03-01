@@ -103,6 +103,74 @@ console.log(resp.data);
 Updating soon.......
 ```
 
+### Search
+
+```bash
+GET /api/stream
+```
+
+### 🔗 Endpoint
+
+```bash
+/api/search?s={string}&page={Number}
+```
+
+#### Parameters
+
+| Parameter | Parameter-Type | Data-Type | Description | Mandatory ? | Default |
+| :-------: | :------------: | :-------: | :---------: | :---------: | :-----: |
+|   `s`     |    `query`     |  string   |   Search    |    yes ✔️   |    --   |
+| `Number`  |    `query`     |  Number   |   page no.  |     No ✖️   |    1    |
+
+#### Example of request
+
+```javascript
+import axios from "axios";
+const resp = await axios.get("/api/search?s=op&page=1");
+console.log(resp.data);
+```
+
+#### Sample response
+
+```javascript
+{
+  "success": true,
+  "mmessage": "Data Found!!",
+  "results": {
+    "currentPage": 1,
+    "totalPages": 32,
+    "results": [
+      {
+        "title": "A Misanthrope Teaches a Class for Demi-Humans",
+        "anime_id": "a-misanthrope-teaches-a-class-for-demi-humans",
+        "poster": "https://image.tmdb.org/t/p/w500/yOM6DxJblSheZwOeGwAzfIHxnCc.jpg"
+      },
+      {
+        "title": "You and I Are Polar Opposites",
+        "anime_id": "you-and-i-are-polar-opposites",
+        "poster": "https://image.tmdb.org/t/p/w500/2hWDXVA0kpLlpHBgw70eNuGpu9w.jpg"
+      },
+      {
+        "title": "If My Favorite Pop Idol Made It to the Budokan, I Would Die",
+        "anime_id": "if-my-favorite-pop-idol-made-it-to-the-budokan-i-would-die",
+        "poster": "https://image.tmdb.org/t/p/w500/n8tBDlRzWOA8ywyQNv3t9EokHVx.jpg"
+      },
+      {
+        "title": "Power Rangers Season 15 Operation Overdrive",
+        "anime_id": "power-rangers-operation-overdrive",
+        "poster": "https://image.tmdb.org/t/p/w500\\/zOOvRQ8Sl3lNHRVFUppcP2UX6FJ.jpg"
+      },
+      {
+        "title": "Takopi's Original Sin",
+        "anime_id": "takopis-original-sin",
+        "poster": "https://image.tmdb.org/t/p/w500/xPXDVhVKt0XM34ihoUVMHtLYTw8.jpg"
+      }
+    ]
+  }
+}
+```
+
+
 ### Series 
 
 ```bash
@@ -211,3 +279,4 @@ console.log(resp.data);
   ]
 }
 ```
+
