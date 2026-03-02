@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: anime-apu
+    name: anime-api
     env: node
     buildCommand: npm install
     startCommand: npm start
