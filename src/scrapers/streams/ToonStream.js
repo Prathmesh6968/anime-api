@@ -53,10 +53,7 @@ const toonstreamScraper = async (anime_id, season, episode) => {
                     let embed = null;
 
                     const baseReplace = (link) =>
-                        link.replace(
-                            "https://as-cdn21.top/video/",
-                            "https://as-cdn21.top/player/index.php?data="
-                        ) + "&do=getVideo";
+                        link
 
                     if (iframeSrc) {
                         embed = baseReplace(iframeSrc);
