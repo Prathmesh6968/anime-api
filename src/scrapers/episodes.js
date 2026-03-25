@@ -3,9 +3,9 @@ const cheerio = require("cheerio");
 const baseUrl = require("../utils/Base_V5");
 const headers = require("../configs/headers");
 
-const episodeScraper = async (slug) => {
+const episodeScraper = async (slug,season=1) => {
   try {
-    const url = `${baseUrl}/episode/${slug}/`;
+    const url = `${baseUrl}/episode/${slug}-${season}x1/`;
 
     const { data } = await axios.get(url, {
       headers: headers,
