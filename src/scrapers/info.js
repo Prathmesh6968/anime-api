@@ -39,7 +39,19 @@ const infiScraper = async(anime_id)=>{
         const seasons = $(".seasons").text().trim().replace("Seasons","").trim()
         const episodes = $(".entry-meta .episodes").text().trim().replace("Episodes","").trim()
         const rating = $(".vote-cn .vote").text().replace("TMDB","").trim()
-        const poster = "https:" + $(".dfxb img").attr("src")
+        let poster =
+                imgTag.attr("data-src") ||
+                imgTag.attr("data-lazy-src") ||
+                imgTag.attr("data-original") ||
+                imgTag.attr("src");
+
+            if (poster && poster.startsWith("data:image")) {
+                poster = null;
+            }
+
+            if (poster && poster.startsWith("//")) {
+                poster = "https:" + poster;
+            }
         const results = {
             title,
             anime_id,
